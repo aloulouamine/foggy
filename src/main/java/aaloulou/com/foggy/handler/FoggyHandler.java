@@ -21,7 +21,7 @@ public class FoggyHandler {
 
     public Mono<ServerResponse> getUser(final ServerRequest request, final MediaType mediaType) {
         return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).bodyValue(new User(
-                FoggyHandler.faker.funnyName().name(),
+                FoggyHandler.faker.name().fullName(),
                 FoggyHandler.faker.date().birthday().toString(),
                 FoggyHandler.faker.bothify("????##@gmail.com"),
                 FoggyHandler.faker.phoneNumber().cellPhone(),
